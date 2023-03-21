@@ -7,7 +7,7 @@
 
     export const server_calls = {
         get: async () => {
-            const response = await fetch(``,
+            const response = await fetch(`https://excellent-sturdy-technician.glitch.me/api/sojus`,
             {
                 method: 'GET',
                 headers: {
@@ -24,12 +24,13 @@
         },
     
         create: async (data: any = {}) => {
-            const response = await fetch(``,
+            const response = await fetch(`https://excellent-sturdy-technician.glitch.me/api/sojus`,
             {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
                     'x-access-token': 'Bearer ${token}',
+                    // 'Access-Control-Allow-Origin': 'https://terrific-glow-turn.glitch.me'
                 },
                 body: JSON.stringify(data)
             })
@@ -42,7 +43,7 @@
         },
     
         update: async (id:string, data: any = {}) => {
-            const response = await fetch(`/api/contacts/${id}`,
+            const response = await fetch(`https://excellent-sturdy-technician.glitch.me/api/sojus/${id}`,
             {
                 method: "POST",
                 headers: {
@@ -60,7 +61,7 @@
         },
     
         delete: async (id:string) => {
-            const response = await fetch(`/api/contacts/${id}`,
+            const response = await fetch(`https://excellent-sturdy-technician.glitch.me/api/sojus/${id}`,
             {
                 method: "DELETE",
                 headers: {
