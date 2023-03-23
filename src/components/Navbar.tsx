@@ -95,7 +95,7 @@ function Navbar() {
                         :
                         <Button className='nav_item p-5 m-5'>
                             <div>
-                                <Link to="/" onClick={ () => {signInOnClick()}} className="flex place-items-center mt-4 lg:inline-block lg:mt-0
+                                <Link to="/" onClick={ () => {signOutOnClick()}} className="flex place-items-center mt-4 lg:inline-block lg:mt-0
                                 text-black hover:text-yellow-800">
                                     Log Out
                                 </Link>
