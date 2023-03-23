@@ -4,7 +4,7 @@ import routes from './config/routes'
 import { Provider } from 'react-redux'
 import { store } from './redux/store'
 // import Home from './pages/Home'
-
+import AuthChecker from './auth/AuthChecker'
 
 function App() {
 
@@ -18,8 +18,15 @@ function App() {
             key={index}
             path={route.path}
             element={
-              <route.component />
-            }
+              route.protected ? (
+              
+              <AuthChecker>
+                <route.component />
+              </AuthChecker>
+              ) : (
+                <route.component />
+              )  
+          }
             />
         )) }
         </Routes>
