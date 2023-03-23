@@ -13,6 +13,8 @@
                 headers: {
                     'Content-Type': 'application/json',
                     'x-access-token': `Bearer ${token}`,
+                    'Access-Control-Allow-Origin': 'https://excellent-sturdy-technician.glitch.me'
+
                 },
             });
     
@@ -29,8 +31,8 @@
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
-                    'x-access-token': 'Bearer ${token}',
-                    // 'Access-Control-Allow-Origin': 'https://terrific-glow-turn.glitch.me'
+                    'x-access-token': `Bearer ${token}`,
+                    'Access-Control-Allow-Origin': 'https://excellent-sturdy-technician.glitch.me',
                 },
                 body: JSON.stringify(data)
             })
@@ -48,7 +50,9 @@
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
-                    'x-access-token': 'Bearer ${token}',
+                    'x-access-token': `Bearer ${token}`,
+                    'Access-Control-Allow-Origin': 'https://excellent-sturdy-technician.glitch.me'
+
                 },
                 body: JSON.stringify(data)
             })
@@ -66,6 +70,9 @@
                 method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json',
+                    'x-access-token': `Bearer ${token}`,
+                    // 'Access-Control-Allow-Origin': 'https://excellent-sturdy-technician.glitch.me'
+
                 }
             })
     

@@ -19,7 +19,7 @@ const ContactForm = (props:ContactFormProps) => {
   const store = useStore();
   
   const onSubmit = (data:any, event:any) => {
-    console.log(`ID: ${props.id}`);
+    console.log(`ID: ${typeof props.id}`);
     console.log(props.id);
     console.log(data);
 
@@ -39,7 +39,8 @@ const ContactForm = (props:ContactFormProps) => {
     
         server_calls.create(store.getState())
         // this will ping the store variable and get the info and create a new user with the info using the create function
-        setTimeout(() => { window.location.reload(), 500});}
+        setTimeout(() => { window.location.reload(), 500});
+    }
   }
   
     return (
