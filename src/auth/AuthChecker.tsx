@@ -8,7 +8,7 @@ interface Props{
 }
 
 const AuthChecker = ({children}:Props) => {
-    const navigate = useNavigate;
+    const navigate = useNavigate();
     // This will check if user is logged in, if so return children
     // which are passed as props - whichever component is protected or not
     // otherwise it sends to login route

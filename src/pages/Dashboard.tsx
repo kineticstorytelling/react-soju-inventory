@@ -1,5 +1,5 @@
 import DataTable from "../components/DataTable"
-import Profile2 from "../assets/images/profile2.png"
+import Profile2 from "../assets/images/profile2.jpg"
 
 const Dashboard = () => {
   return (

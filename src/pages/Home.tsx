@@ -1,4 +1,4 @@
-import Background from '../assets/images/hero3-1.png'
+import Background from '../assets/images/hero3-1.jpg'
 import '../styles.css'
 
 function Home() {
