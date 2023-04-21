@@ -31,13 +31,19 @@ const ContactForm = (props:ContactFormProps) => {
         // this reloads the page to the update table once you do an update input
         event.target.reset()
     } else {
+        const newSoju = {
+            name: data.name,
+            style: data.style,
+            flavor: data.flavor
+    
+            };
         // use dispatch to update our state in our store
         dispatch(chooseName(data.name));
         // the data is coming from below in the return
         dispatch(chooseStyle(data.style));
         dispatch(chooseFlavor(data.flavor));
     
-        server_calls.create(store.getState())
+        server_calls.create(newSoju)
         // this will ping the store variable and get the info and create a new user with the info using the create function
         setTimeout(() => { window.location.reload(), 500});
     }
