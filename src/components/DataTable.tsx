@@ -17,7 +17,7 @@ const columns: GridColDef[]=[
 function DataTable() {
     const [ open, setOpen ] = useState(false);
     const{ contactData, getData } = useGetData();
-    // write getData hook and selection model
+    // getData hook and then contactData
     const [ selectionModel, setSelectionModel] = useState<string[]>([])
 
     const handleOpen = () => {
@@ -49,7 +49,7 @@ function DataTable() {
                     className="p-3 m-3 bg-slate-300 rounded hover:bg-slate-800 hover:text-white"
                     onClick={()=>handleOpen()}
                 >
-                    Create New Contact
+                    Create New Soju
                 </button>
             </div>
         <Button onClick={handleOpen} className="p-3 bg-slate-300 m-3 rounded hover:bg-slate-800 hover:text-white" >Update</Button>
@@ -57,11 +57,12 @@ function DataTable() {
         </div>
         {/* end */}
 
-        
+        {/*actual data table  */}
         <div className={open ? "hidden" : "container mx-10 my-5 flex flex-col"}
             style = {{height: 400, width: '100%'}}
             >
                 <h2 className='p-3 bg-blue-200 my-2 rounded'>My Contacts</h2>
+                {/* rows are contactData hook */}
                 <DataGrid rows={contactData} columns={columns} rowsPerPageOptions={[5]}
                 checkboxSelection={true} 
                 onSelectionModelChange = {(item:any) =>{
